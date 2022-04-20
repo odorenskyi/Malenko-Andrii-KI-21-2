@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1650434589 source:c:\users\admin\desktop\bmtp-lab10-Маленко\prj\malenko_module\main\main.cpp
+	<time.h>
+	<fstream>
+	<math.h>
+	<iostream>
+	<Windows.h>
+	<string>
+	<stdlib.h>
+	<bitset>
+	<cmath>
+
