@@ -46,10 +46,10 @@ int avt(string inf,string outf){
 ofstream file2;
 file2.open(outf);
 
-file2   << "Розробник:          Маленко Андрій"                                        << endl
-        << "ВНЗ:                Центральний Національний Технічний Університет"        << endl
-        << "Місто/Країна:       Кропивницький/Україна"                                 << endl
-        << "Рік розробки:       2022"                                                  << endl;
+file2   << "Р РѕР·СЂРѕР±РЅРёРє:          РњР°Р»РµРЅРєРѕ РђРЅРґСЂС–Р№"                                        << endl
+        << "Р’РќР—:                Р¦РµРЅС‚СЂР°Р»СЊРЅРёР№ РќР°С†С–РѕРЅР°Р»СЊРЅРёР№ РўРµС…РЅС–С‡РЅРёР№ РЈРЅС–РІРµСЂСЃРёС‚РµС‚"        << endl
+        << "РњС–СЃС‚Рѕ/РљСЂР°С—РЅР°:       РљСЂРѕРїРёРІРЅРёС†СЊРєРёР№/РЈРєСЂР°С—РЅР°"                                 << endl
+        << "Р С–Рє СЂРѕР·СЂРѕР±РєРё:       2022"                                                  << endl;
 file2.close();
 }
 int abz(string inf,string outf){
@@ -64,7 +64,7 @@ int ab;char S;
         }
 ofstream file2;
 file2.open(outf,ios::app);
-file2<<"Кількість абзаців: "<<ab<<endl;
+file2<<"РљС–Р»СЊРєС–СЃС‚СЊ Р°Р±Р·Р°С†С–РІ: "<<ab<<endl;
 file1.close();
 file2.close();
 }
@@ -76,18 +76,18 @@ string str; int ab=0,aa=0,ad=0;
         {
         str="";
         file1>>str;
-            if (str =="Україна"){
+            if (str =="РЈРєСЂР°С—РЅР°"){
                 ab++;}
-            if (str =="університет"){
+            if (str =="СѓРЅС–РІРµСЂСЃРёС‚РµС‚"){
                 aa++;}
-            if (str =="блокнот"){
+            if (str =="Р±Р»РѕРєРЅРѕС‚"){
                 ad++;}
         }
 ofstream file2;
 file2.open(outf,ios::app);
-file2<<"Кількість Україна: "<<ab<<endl;
-file2<<"Кількість університет: "<<aa<<endl;
-file2<<"Кількість блокнот: "<<ad<<endl;
+file2<<"РљС–Р»СЊРєС–СЃС‚СЊ РЈРєСЂР°С—РЅР°: "<<ab<<endl;
+file2<<"РљС–Р»СЊРєС–СЃС‚СЊ СѓРЅС–РІРµСЂСЃРёС‚РµС‚: "<<aa<<endl;
+file2<<"РљС–Р»СЊРєС–СЃС‚СЊ Р±Р»РѕРєРЅРѕС‚: "<<ad<<endl;
 file1.close();
 file2.close();
 }
@@ -103,7 +103,7 @@ int ab =0;char S;
         }
 ofstream file2;
 file2.open(outf,ios::app);
-file2<<"Кількість крапок: "<<ab-1<<endl;
+file2<<"РљС–Р»СЊРєС–СЃС‚СЊ РєСЂР°РїРѕРє: "<<ab-1<<endl;
 
 file1.close();
 file2.close();
@@ -117,7 +117,7 @@ int time(string inf,string outf){
 int calc(string outf,double x, double y, double z){
     ofstream file2;
     file2.open(outf,ios::app);
-    file2 << "Результати функції:" << s_calculation(&x,&y, &z) << endl;
+    file2 << "Р РµР·СѓР»СЊС‚Р°С‚Рё С„СѓРЅРєС†С–С—:" << s_calculation(&x,&y, &z) << endl;
     file2.close();
     return 0;
 }
@@ -133,7 +133,7 @@ int binf(string outf,int num){
         num/=2;
     }
 
-    file<< "Число в двійковій системі:" << bin<<endl;
+    file<< "Р§РёСЃР»Рѕ РІ РґРІС–Р№РєРѕРІС–Р№ СЃРёСЃС‚РµРјС–:" << bin<<endl;
     return 0;
 }
 
