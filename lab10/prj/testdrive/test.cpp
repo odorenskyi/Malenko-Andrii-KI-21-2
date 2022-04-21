@@ -38,7 +38,7 @@ int main(){system("chcp 1251 & cls");
     file4.close();
 
 
-    cout<<"Ðåçóëüòàò òåñòóâàííÿ 10.1: ";
+    cout<<"Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ‚ÐµÑÑ‚ÑƒÐ²Ð°Ð½Ð½Ñ 10.1: ";
     if (text1==text2){cout<<"Pass"<<endl;}
     if (text1!=text2){cout<<"Fail"<<endl;}
 
@@ -66,7 +66,7 @@ int main(){system("chcp 1251 & cls");
     file4.close();
 
 
-    cout<<"Ðåçóëüòàò òåñòóâàííÿ 10.2: ";
+    cout<<"Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ‚ÐµÑÑ‚ÑƒÐ²Ð°Ð½Ð½Ñ 10.2: ";
     if (text1==text2){cout<<"Pass"<<endl;}
     if (text1!=text2){cout<<"Fail"<<endl;}
 
@@ -95,7 +95,7 @@ int main(){system("chcp 1251 & cls");
     file4.close();
 
 
-    cout<<"Ðåçóëüòàò òåñòóâàííÿ 10.3: ";
+    cout<<"Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ‚ÐµÑÑ‚ÑƒÐ²Ð°Ð½Ð½Ñ 10.3: ";
     if (text1==text2){cout<<"Pass"<<endl;}
     if (text1!=text2){cout<<"Fail"<<endl;}
 
@@ -124,7 +124,7 @@ int main(){system("chcp 1251 & cls");
     file4.close();
 
 
-    cout<<"Ðåçóëüòàò òåñòóâàííÿ 10.3: ";
+    cout<<"Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ‚ÐµÑÑ‚ÑƒÐ²Ð°Ð½Ð½Ñ 10.3: ";
     if (text1==text2){cout<<"Pass"<<endl;}
     if (text1!=text2){cout<<"Fail"<<endl;}
 
