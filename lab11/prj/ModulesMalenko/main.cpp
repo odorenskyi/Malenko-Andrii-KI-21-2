@@ -9,14 +9,14 @@ void DeleteRase(BusStation* &rase)
 
     bool isDelete = false;
     short number;
-    cout << "¬‚Â‰≥Ú¸ ÌÓÏÂ ÂÈÒÛ: ";
+    cout << "–í–≤–µ–¥—ñ—Ç—å –Ω–æ–º–µ—Ä —Ä–µ–π—Å—É: ";
 
     while (!(cin >> number))
     {
         cin.clear();
         while (cin.get() != '\n')
             continue;
-        cout << "¬Ë ‚‚ÂÎË ÌÂ ˜ËÒÎÓ. —ÔÓ·ÛÈÚÂ ˘Â ‡Á: ";
+        cout << "–í–∏ –≤–≤–µ–ª–∏ –Ω–µ —á–∏—Å–ª–æ. –°–ø—Ä–æ–±—É–π—Ç–µ —â–µ —Ä–∞–∑: ";
     }
 
     do {
@@ -33,7 +33,7 @@ void DeleteRase(BusStation* &rase)
         delete_rase = delete_rase->next;
     } while (delete_rase != nullptr);
 
-    if (isDelete == false) {cout << "ÃË ÌÂ ÁÏÓ„ÎË ÁÌ‡ÈÚË ÊÓ‰ÌÓ„Ó ÂÈÒÛ ‰Îˇ ‚Ë‰‡ÎÂÌÌˇ!" << endl << endl;}
+    if (isDelete == false) {cout << "–ú–∏ –Ω–µ –∑–º–æ–≥–ª–∏ –∑–Ω–∞–π—Ç–∏ –∂–æ–¥–Ω–æ–≥–æ —Ä–µ–π—Å—É –¥–ª—è –≤–∏–¥–∞–ª–µ–Ω–Ω—è!" << endl << endl;}
     else {cout << endl << endl;}
 
 }
@@ -43,7 +43,7 @@ void AddNumRase(BusStation* rase, BusStation* new_rase)
     BusStation* begin = rase;
     char num_rase1[Size_Num_Rase];
 
-    cout << "¬‚Â‰≥Ú¸ ÌÓÏÂ ÂÈÒ‡ (ÌÂ ·≥Î¸¯Â 999): ";
+    cout << "–í–≤–µ–¥—ñ—Ç—å –Ω–æ–º–µ—Ä —Ä–µ–π—Å–∞ (–Ω–µ –±—ñ–ª—å—à–µ 999): ";
     cin >> num_rase1;
 
     while ((!isdigit(int(num_rase1[0])) && !isdigit(int(num_rase1[1])) && !isdigit(int(num_rase1[2])))
@@ -52,7 +52,7 @@ void AddNumRase(BusStation* rase, BusStation* new_rase)
         cin.clear();
         while (cin.get() != '\n')
             continue;
-        cout << "¬Ë ‚‚ÂÎË ÌÂ ˜ËÒÎÓ ‡·Ó ·≥Î¸¯Â 999. —ÔÓ·ÛÈÚÂ ˘Â ‡Á: ";
+        cout << "–í–∏ –≤–≤–µ–ª–∏ –Ω–µ —á–∏—Å–ª–æ –∞–±–æ –±—ñ–ª—å—à–µ 999. –°–ø—Ä–æ–±—É–π—Ç–µ —â–µ —Ä–∞–∑: ";
         cin >> num_rase1;
     }
     do
@@ -63,28 +63,28 @@ void AddNumRase(BusStation* rase, BusStation* new_rase)
             num_rase1[3] == begin->num_rase[3] )
         {
             char answer;
-            cout << "œ≥‰ ˆËÏ ÌÓÏÂÓÏ ÂÈÒ: " << begin->name_rase << endl
-                 << "¬Ë Ï‡ÎË Ì‡Û‚‡Á≥ ˆÂÈ ÂÈÒ?(“\\Õ) ";
+            cout << "–ü—ñ–¥ —Ü–∏–º –Ω–æ–º–µ—Ä–æ–º —Ä–µ–π—Å: " << begin->name_rase << endl
+                 << "–í–∏ –º–∞–ª–∏ –Ω–∞—É–≤–∞–∑—ñ —Ü–µ–π —Ä–µ–π—Å?(–¢\\–ù) ";
             cin >> answer;
-            while (answer != '“' && answer != 'Ú' && answer != 'Õ' && answer != 'Ì')
+            while (answer != '–¢' && answer != '—Ç' && answer != '–ù' && answer != '–Ω')
             {
                 cin.clear();
                 while (cin.get() != '\n')
                     continue;
-                cout << "¬‚Â‰≥Ú¸ \"“‡Í\" ‡·Ó \"Õ≥\": ";
+                cout << "–í–≤–µ–¥—ñ—Ç—å \"–¢–∞–∫\" –∞–±–æ \"–ù—ñ\": ";
                 cin >> answer;
             }
-            if (answer == 'Õ' || answer == 'Ì')
+            if (answer == '–ù' || answer == '–Ω')
             {
-                cout << "–ÂÈÒ Á Ú‡ÍËÏ ÌÓÏÂÓÏ ‚ÊÂ ∫," << endl
-                     << "‚‚Â‰≥Ú¸ ≥Ì¯ËÈ ÌÓÏÂ: ";
+                cout << "–†–µ–π—Å –∑ —Ç–∞–∫–∏–º –Ω–æ–º–µ—Ä–æ–º –≤–∂–µ —î," << endl
+                     << "–≤–≤–µ–¥—ñ—Ç—å —ñ–Ω—à–∏–π –Ω–æ–º–µ—Ä: ";
                 cin >> num_rase1;
                 while (strstr(begin->num_rase, num_rase1))
                 {
                     cin.clear();
                     while (cin.get() != '\n')
                         continue;
-                    cout << "«ÌÓ‚Û ÒıÓÊ≥, ‚‚Â‰≥Ú¸ ˘Â ‡Á: ";
+                    cout << "–ó–Ω–æ–≤—É —Å—Ö–æ–∂—ñ, –≤–≤–µ–¥—ñ—Ç—å —â–µ —Ä–∞–∑: ";
                     cin >> num_rase1;
                 }
             }
@@ -105,23 +105,23 @@ void AddRase(BusStation* rase)
 
     AddNumRase(rase, new_rase);
 
-    cout << "¬‚Â‰≥Ú¸ Ï‡¯ÛÚ: ";
+    cout << "–í–≤–µ–¥—ñ—Ç—å –º–∞—Ä—à—Ä—É—Ç: ";
     cin.getline(new_rase->name_rase, Size_Name_Rase);
-    cout << "¬‚Â‰≥Ú¸ ‡‚ÚÓÒÚ‡Ìˆ≥˛ ‡·Ó ‡‚ÚÓ‚ÓÍÁ‡Î (ˇÍ˘Ó ∫): ";
+    cout << "–í–≤–µ–¥—ñ—Ç—å –∞–≤—Ç–æ—Å—Ç–∞–Ω—Ü—ñ—é –∞–±–æ –∞–≤—Ç–æ–≤–æ–∫–∑–∞–ª (—è–∫—â–æ —î): ";
     cin.getline(new_rase->name_station, Size_Name_Station);
-    cout << "¬‚Â‰≥Ú¸ „‡Ù≥Í: ";
+    cout << "–í–≤–µ–¥—ñ—Ç—å –≥—Ä–∞—Ñ—ñ–∫: ";
     cin.getline(new_rase->days_rase, Size_Days_Rase);
 
     char hours[3], minutes[3];
     for (short i = 0; i < Amount_Time; i++)
     {
         new_rase->time_rase[i] = new char[Time];
-        cout << "¬‚Â‰≥Ú¸ „Ó‰ËÌË ‚≥‰Ô‡‚ÎÂÌÌˇ ‡·Ó ÔË·ÛÚÚˇ (‰Îˇ Á‡‚Â¯ÂÌÌˇ ‚‚Â‰≥Ú¸ π): ";
+        cout << "–í–≤–µ–¥—ñ—Ç—å –≥–æ–¥–∏–Ω–∏ –≤—ñ–¥–ø—Ä–∞–≤–ª–µ–Ω–Ω—è –∞–±–æ –ø—Ä–∏–±—É—Ç—Ç—è (–¥–ª—è –∑–∞–≤–µ—Ä—à–µ–Ω–Ω—è –≤–≤–µ–¥—ñ—Ç—å ‚Ññ): ";
         cin >> hours;
 
-        if (hours[0] == 'π')
+        if (hours[0] == '‚Ññ')
         {
-            strcpy(new_rase->time_rase[i], "π");
+            strcpy(new_rase->time_rase[i], "‚Ññ");
             break;
         }
         while (atoi(hours) > 24 || atoi(hours) < 0)
@@ -129,15 +129,15 @@ void AddRase(BusStation* rase)
             cin.clear();
             while (cin.get() != '\n')
                 continue;
-            cout << "ÕÂÔ‡‚ËÎ¸ÌÓ. —ÔÓ·ÛÈÚÂ ˘Â ‡Á: ";
+            cout << "–ù–µ–ø—Ä–∞–≤–∏–ª—å–Ω–æ. –°–ø—Ä–æ–±—É–π—Ç–µ —â–µ —Ä–∞–∑: ";
             cin >> hours;
         }
 
-        cout << "¬‚Â‰≥Ú¸ ı‚ËÎËÌË ‚≥‰Ô‡‚ÎÂÌÌˇ ‡·Ó ÔË·ÛÚÚˇ (‰Îˇ Á‡‚Â¯ÂÌÌˇ ‚‚Â‰≥Ú¸ π): ";
+        cout << "–í–≤–µ–¥—ñ—Ç—å —Ö–≤–∏–ª–∏–Ω–∏ –≤—ñ–¥–ø—Ä–∞–≤–ª–µ–Ω–Ω—è –∞–±–æ –ø—Ä–∏–±—É—Ç—Ç—è (–¥–ª—è –∑–∞–≤–µ—Ä—à–µ–Ω–Ω—è –≤–≤–µ–¥—ñ—Ç—å ‚Ññ): ";
         cin >> minutes;
-        if (minutes[0] == 'π')
+        if (minutes[0] == '‚Ññ')
         {
-            strcpy(new_rase->time_rase[i], "π");
+            strcpy(new_rase->time_rase[i], "‚Ññ");
             break;
         }
         while (atoi(minutes) > 59 || atoi(minutes) < 0)
@@ -145,7 +145,7 @@ void AddRase(BusStation* rase)
             cin.clear();
             while (cin.get() != '\n')
                 continue;
-            cout << "ÕÂÔ‡‚ËÎ¸ÌÓ. —ÔÓ·ÛÈÚÂ ˘Â ‡Á: ";
+            cout << "–ù–µ–ø—Ä–∞–≤–∏–ª—å–Ω–æ. –°–ø—Ä–æ–±—É–π—Ç–µ —â–µ —Ä–∞–∑: ";
             cin >> minutes;
         }
 
