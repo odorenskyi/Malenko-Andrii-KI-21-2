@@ -8,7 +8,7 @@ void FindRase(BusStation* rase)
     string station;
     bool isRase = false;
 
-    cout << "¬‚Â‰≥Ú¸ Ï≥ÒÚÓ: ";
+    cout << "–í–≤–µ–¥—ñ—Ç—å –º—ñ—Å—Ç–æ: ";
 
     getline(cin, station);
 
@@ -18,9 +18,9 @@ void FindRase(BusStation* rase)
         string buffRase = begin->name_rase;
         for (short i = 0; i < Size_Name_Rase; i++)
         {
-            if(station[i] >= '¿' && station[i] <= 'ﬂ')
+            if(station[i] >= '–ê' && station[i] <= '–Ø')
                 station[i] = char(station[i]) + 32;
-            if(buffRase[i] >= '¿' && buffRase[i] <= 'ﬂ')
+            if(buffRase[i] >= '–ê' && buffRase[i] <= '–Ø')
                 buffRase[i] = char(buffRase[i]) + 32;
         }
 
@@ -35,7 +35,7 @@ void FindRase(BusStation* rase)
 
             for (short i = 0; i < Amount_Time; i++)
             {
-                if (strstr(begin->time_rase[i], "π"))
+                if (strstr(begin->time_rase[i], "‚Ññ"))
                 {
                     break;
                 }
@@ -46,7 +46,7 @@ void FindRase(BusStation* rase)
         begin = begin->next;
     } while (begin->next != nullptr);
 
-    if (isRase == false) {cout << "ÃË ÌÂ ÁÏÓ„ÎË ÁÌ‡ÈÚË ÊÓ‰ÌÓ„Ó ÂÈÒÛ!" << endl << endl;}
+    if (isRase == false) {cout << "–ú–∏ –Ω–µ –∑–º–æ–≥–ª–∏ –∑–Ω–∞–π—Ç–∏ –∂–æ–¥–Ω–æ–≥–æ —Ä–µ–π—Å—É!" << endl << endl;}
     else {cout << endl << endl;}
 }
 
@@ -61,7 +61,7 @@ void ShowRases(BusStation* rase)
 
         for (i = 0; i < 5; i++)
         {
-            if (strstr(begin->time_rase[i], "π"))
+            if (strstr(begin->time_rase[i], "‚Ññ"))
             {
                 break;
             }
@@ -79,7 +79,7 @@ void ShowRases(BusStation* rase)
             cout << "|";
             for (i = 5; i < 10; i++)
             {
-                if (strstr(begin->time_rase[i], "π"))
+                if (strstr(begin->time_rase[i], "‚Ññ"))
                 {
                     break;
                 }
