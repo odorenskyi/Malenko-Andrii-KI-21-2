@@ -14,7 +14,7 @@ void WriteToDataFile(char file_name[], BusStation* rase)
         File.write((char*)&*rase->days_rase, sizeof(rase->days_rase));
         for(short i = 0; i < Amount_Time; i++)
         {
-            if (strstr(rase->time_rase[i], "¹"))
+            if (strstr(rase->time_rase[i], "â„–"))
             {
                 File.write((char*)&*rase->time_rase[i], sizeof(rase->time_rase[i]));
                 break;
@@ -24,7 +24,7 @@ void WriteToDataFile(char file_name[], BusStation* rase)
         rase = rase->next;
     }
     File.close();
-    cout << "Äÿêóþ çà âèêîðèñòàííÿ!" << endl;
+    cout << "Ð”ÑÐºÑƒÑŽ Ð·Ð° Ð²Ð¸ÐºÐ¾Ñ€Ð¸ÑÑ‚Ð°Ð½Ð½Ñ!" << endl;
 
 }
 
@@ -43,7 +43,7 @@ void ReadDataFile(char file_name[], BusStation* rase)
         {
             rase->time_rase[i] = new char [Time];
             File.read((char*)&*rase->time_rase[i], sizeof(rase->time_rase[i]));
-            if (strstr(rase->time_rase[i], "¹"))
+            if (strstr(rase->time_rase[i], "â„–"))
             {
                 break;
             }
@@ -68,15 +68,15 @@ BusStation* AddExample(char file_name[], BusStation* rase)
     File.open(file_name, ios::out | ios::binary);
     rase = new BusStation;
     strcpy(rase->num_rase, "455");
-    strcpy(rase->name_rase, "Êðîïèâíèöüêèé - Äí³ïðî");
-    strcpy(rase->name_station, "Öåíòðàëüíèé àâòîâîêçàë");
-    strcpy(rase->days_rase, "ùîäåííî äî 29.10");
+    strcpy(rase->name_rase, "ÐšÑ€Ð¾Ð¿Ð¸Ð²Ð½Ð¸Ñ†ÑŒÐºÐ¸Ð¹ - Ð”Ð½Ñ–Ð¿Ñ€Ð¾");
+    strcpy(rase->name_station, "Ð¦ÐµÐ½Ñ‚Ñ€Ð°Ð»ÑŒÐ½Ð¸Ð¹ Ð°Ð²Ñ‚Ð¾Ð²Ð¾ÐºÐ·Ð°Ð»");
+    strcpy(rase->days_rase, "Ñ‰Ð¾Ð´ÐµÐ½Ð½Ð¾ Ð´Ð¾ 29.10");
     rase->time_rase[0] = new char[Time];
     strcpy(rase->time_rase[0], "07:30");
     rase->time_rase[1] = new char[Time];
     strcpy(rase->time_rase[1], "11:30");
     rase->time_rase[2] = new char[Time];
-    strcpy(rase->time_rase[2], "¹");
+    strcpy(rase->time_rase[2], "â„–");
     rase->next = nullptr;
     File.write((char*)&*rase->num_rase, sizeof(rase->num_rase));
     File.write((char*)&*rase->name_rase, sizeof(rase->name_rase));
@@ -84,7 +84,7 @@ BusStation* AddExample(char file_name[], BusStation* rase)
     File.write((char*)&*rase->days_rase, sizeof(rase->days_rase));
     for(short i = 0; i < Amount_Time; i++)
     {
-        if (strstr(rase->time_rase[i], "¹"))
+        if (strstr(rase->time_rase[i], "â„–"))
         {
             File.write((char*)&*rase->time_rase[i], sizeof(rase->time_rase[i]));
             break;
@@ -106,7 +106,7 @@ void WriteToTxtFile(fstream &file, BusStation* rase)
 
         for (i = 0; i < 5; i++)
         {
-            if (strstr(begin->time_rase[i], "¹"))
+            if (strstr(begin->time_rase[i], "â„–"))
             {
                 break;
             }
@@ -124,7 +124,7 @@ void WriteToTxtFile(fstream &file, BusStation* rase)
             file << "|";
             for (i = 5; i < 10; i++)
             {
-                if (strstr(begin->time_rase[i], "¹"))
+                if (strstr(begin->time_rase[i], "â„–"))
                 {
                     break;
                 }
